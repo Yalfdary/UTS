@@ -1,0 +1,216 @@
+body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+.landing-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.landing-container {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 50px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-width: 500px;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2563eb;
+  margin: 0;
+  padding: 5px 5px;
+  display: inline-block;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.wallet-status-section {
+  text-align: center;
+  margin: 20px 0 15px 0;
+}
+
+.wallet-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.wallet-status.checking {
+  background-color: #f9fafb;
+  color: #6b7280;
+  border-color: #d1d5db;
+}
+
+.wallet-status.connected {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border-color: #6ee7b7;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.wallet-status.disconnected {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border-color: #fca5a5;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.status-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.status-text {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.download-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.download-btn {
+  background-color: #2563eb;
+  color: white;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.download-btn:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.login-section {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.login-btn {
+  flex: 1;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.login-btn:hover:not(:disabled) {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.login-btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+  background: white;
+  color: #6b7280;
+  border-color: #d1d5db;
+}
+
+.user-btn:hover:not(:disabled) {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.admin-btn:hover:not(:disabled) {
+  background-color: #dc2626;
+  color: white;
+  border-color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+    padding: 40px 30px;
+    min-width: auto;
+  }
+
+  .login-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 36px;
+    padding: 12px 30px;
+  }
+
+  .wallet-status {
+    font-size: 12px;
+    padding: 10px 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .wallet-status-section {
+    margin: 20px 0 15px 0;
+  }
+
+  .status-icon {
+    font-size: 16px;
+  }
+}
